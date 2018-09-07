@@ -1,0 +1,16 @@
+
+<IfModule pagespeed_module>
+    ModPagespeed off
+</IfModule>
+
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /iclipse/
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /iclipse/index.php [L]
+</IfModule>
+
+# END WordPress
